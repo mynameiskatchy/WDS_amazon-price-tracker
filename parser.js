@@ -15,6 +15,11 @@ async function checkPrice() {
         console.log(priceString)
         const priceNumber = parseFloat(priceString.replace('$', ''))
         console.log(priceNumber)
+        if (priceNumber < 150) {
+            console.log("It is cheap")
+        } else {
+            console.log("It is expensive")
+        }
     } catch (e) {
         console.log('Amazon price error')
         throw e
